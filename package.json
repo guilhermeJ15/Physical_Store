@@ -1,0 +1,30 @@
+{
+  "name": "desafio2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/guilhermeJ15/Physical_Store#readme",
+  "bugs": {
+    "url": "https://github.com/guilhermeJ15/Physical_Store/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermeJ15/Physical_Store.git"
+  },
+  "license": "ISC",
+  "author": "Guilherme",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js localhost 3000"
+  },
+  "dependencies": {
+    "axios": "^1.8.1",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5"
+  }
+}
