@@ -1,7 +1,0 @@
-
-{"level":"error","message":"Erro ao cadastrar loja: Request failed with status code 400","timestamp":"2025-03-10T04:04:55.556Z"}
-{"level":"error","message":"Erro ao cadastrar loja: Request failed with status code 400","timestamp":"2025-03-10T04:05:07.191Z"}
-{"level":"error","message":"Erro ao cadastrar loja: Request failed with status code 400","timestamp":"2025-03-10T04:14:15.574Z"}
-{"level":"error","message":"Erro ao cadastrar loja: Request failed with status code 400","timestamp":"2025-03-10T04:14:28.874Z"}
-{"level":"error","message":"Erro ao cadastrar loja: Request failed with status code 400","timestamp":"2025-03-10T04:16:06.937Z"}
-{"level":"error","message":"Erro ao buscar lojas: Não foi possível obter coordenadas do CEP.","timestamp":"2025-03-10T04:19:56.259Z"}
