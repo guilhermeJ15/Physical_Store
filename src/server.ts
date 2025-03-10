@@ -14,5 +14,5 @@ app.use(router);
 
 const PORT = process.env.PORT || 3000;
 connectDB().then(() => {
-    app.listen(PORT, () => logger.info(`🚀 Servidor rodando na porta ${PORT}`));
+    app.listen(PORT, () => logger.info(`Servidor rodando na porta ${PORT}`));
 });

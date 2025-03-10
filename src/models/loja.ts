@@ -7,8 +7,6 @@ const LojaSchema = new mongoose.Schema({
     bairro: String,
     localidade: String,
     uf: String,
-    telefone: String,
-    horario: String,
     latitude: Number,
     longitude: Number
 });

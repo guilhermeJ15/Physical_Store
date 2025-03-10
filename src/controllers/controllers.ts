@@ -34,13 +34,7 @@ export const cadastrarLoja = async (req: Request, res: Response) => {
         const { lat, lon } = geoResponse.data[0];
 
         const novaLoja = new Loja({
-            nome, cep, 
-            logradouro, 
-            bairro, 
-            localidade, 
-            uf, 
-            telefone, 
-            horario,
+            nome, cep, logradouro, bairro, localidade, uf, telefone, horario,
             latitude: parseFloat(lat), longitude: parseFloat(lon)
         });
 
@@ -90,4 +84,3 @@ export const buscarLojas = async (req: Request, res: Response) => {
         res.status(500).json({ error: error.message });
     }
 };
-

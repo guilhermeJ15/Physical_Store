@@ -12,18 +12,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const dotenv_1 = __importDefault(require("dotenv"));
-const logger_1 = __importDefault(require("./logger"));
-dotenv_1.default.config();
-const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        yield mongoose_1.default.connect(process.env.MONGO_URI);
-        logger_1.default.info("Banco de dados MongoDB conectado!");
-    }
-    catch (error) {
-        logger_1.default.error("Erro ao conectar ao banco:", error);
-        process.exit(1);
-    }
-});
-exports.default = connectDB;
+const express_1 = __importDefault(require("express"));
+const controllers_1 = require("./controllers/controllers");
+const router = express_1.default.Router();
+router.post("/lojas", controllers_1.cadastrarLoja);
+router.get("/lojas/:cep", (req, res) => __awaiter(void 0, void 0, void 0, function* () { yield (0, controllers_1.buscarLojas)(req, res); }));
+exports.default = router;
