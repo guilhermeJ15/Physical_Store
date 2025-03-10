@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import axios from "axios";
 import { Loja } from "../models/loja";
 import logger from "../logger";
+import { limparCep } from "../utils/formatters";
 
 const calcularDistanciaHaversine = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
     const R = 6371;
@@ -52,7 +53,7 @@ export const buscarLojas = async (req: Request, res: Response) => {
 
     try {
         const geoResponse = await axios.get("https://nominatim.openstreetmap.org/search", {
-            params: { q: `${cep}, Brasil`, format: "json" }
+            params: { q: `${limparCep(cep)}, Brasil`, format: "json" }
         });
 
         if (!geoResponse.data.length) throw new Error("Não foi possível obter coordenadas do CEP.");
